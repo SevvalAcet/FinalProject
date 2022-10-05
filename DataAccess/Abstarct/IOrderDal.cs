@@ -3,8 +3,7 @@ using Entities.Concrete;
 
 namespace DataAccess.Abstarct
 {
-    public interface ICategoryDal:IEntityRepository<Category>
+    public interface IOrderDal:IEntityRepository<Order>
     {
-       
     }
 }

@@ -1,8 +1,7 @@
-﻿
-using Entities.Abstact;
+﻿using Core.Entities;
 using System.Linq.Expressions;
 
-namespace DataAccess.Abstarct
+namespace Core.DataAccess
 {    //generic constraint:kısıtlama
     //class:referans tip olabilir
     public interface IEntityRepository<T> where T : class, IEntity,new()
