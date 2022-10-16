@@ -57,4 +57,3 @@ namespace Core.DataAccess.EntityFramework
         }
     }
 }
-    
