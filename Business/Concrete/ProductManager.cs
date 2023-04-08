@@ -2,9 +2,9 @@
 using Business.Constants;
 using Core.Utilities.Results;
 using DataAccess.Abstarct;
-using DataAccess.Concrete.EntityFramework;
 using Entities.Concrete;
 using Entities.DTOs;
+using FluentValidation;
 
 namespace Business.Concrete
 {
@@ -17,14 +17,11 @@ namespace Business.Concrete
             _productDal = productDal;
         }
 
-        public IResult Add(Product product)
-        {
-            if(product.ProductName.Length < 2)
-            {
-                return new ErrorResult(Messages.ProductNameInvalid);
-            }
-            _productDal.Add(product);
 
+        public IResult Add(Product product)
+
+        {
+            _productDal.Add(product);
             return new SuccessResult(Messages.ProductAdded);
         }
 
